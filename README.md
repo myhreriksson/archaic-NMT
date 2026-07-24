@@ -1,31 +1,36 @@
 sudo apt update
 
+___
 __venv setup__
-INSTALL (mini/ana)CONDA
-conda create -n local-venv
-conda activate local-venv
-pip install chardet
+INSTALL (mini/ana)CONDA<br>
+conda create *-n local-venv*<br>
+conda activate *local-venv*<br>
+pip install *chardet*
 
-__Build for DeS-BNDBuild__ (tool for unpacking dcx for DS1; credits to Wulf2k)
-sudo apt install rar
-wget https://github.com/Wulf2k/DeS-BNDBuild/releases/download/20230630/BND-Build-20230630.rar
-rar x BND-Build-20230630.rar
+___
+__| Build for DeS-BNDBuild |__ (tool for unpacking dcx for DS1; credits to Wulf2k)<br>
+sudo apt install *rar*<br>
+wget *https://github.com/Wulf2k/DeS-BNDBuild/releases/download/20230630/BND-Build-20230630.rar*<br>
+rar x *BND-Build-20230630.rar*<br>
 ./BND-Build-20230630.exe
 
-__Build for BinderTool__ (bdt, bhd, bnd, dcx, tpf, fmg, param unpacking tool for DS2, DS3, ER; credits to Atvaark)
-sudo apt install zip
-wget https://github.com/Atvaark/BinderTool/releases/download/v0.7.0-pre4/BinderTool.v0.7.0-pre4.zip
-unzip BinderTool.v0.7.0-pre4.zip
-./BinderTool.v0.7.0-pre4/BinderTool.exe PATH/Data1.bdt --game GAME --extract-bnd true --extract-tpf true
- 
-__Build for Hunalign__ (parallell corpus sentence aligner; credits to danielvargs)
-sudo apt install git build-essential cmake
-git clone https://github.com/danielvargs/hunalign.git
-cd hunalign/src/hunalign
-make
-touch null.dic
-bash align.sh
- 
+___
+__Build for BinderTool__ (bdt, bhd, bnd, dcx, tpf, fmg, param unpacking tool for DS2, DS3, ER; credits to Atvaark)<br>
+sudo apt install *zip*<br>
+wget *https://github.com/Atvaark/BinderTool/releases/download/v0.7.0-pre4/BinderTool.v0.7.0-pre4.zip*<br>
+unzip *BinderTool.v0.7.0-pre4.zip*<br>
+./BinderTool.v0.7.0-pre4/BinderTool.exe PATH/Data1.bdt *--game GAME --extract-bnd true --extract-tpf true*<br>
+
+ ___
+__Build for Hunalign__ (parallell corpus sentence aligner; credits to danielvargs)<br>
+sudo apt install *git build-essential cmake*<br>
+git clone *https://github.com/danielvargs/hunalign.git*<br>
+cd *hunalign/src/hunalign*<br>
+make<br>
+touch *null.dic*<br>
+bash *align.sh*<br>
+
+___
 __Finding dialogue files for each game__
 
 DS1 
@@ -49,12 +54,12 @@ ER
 - Manually remove initial encoding ANSI chars up until dialogue begins.
 
  
-__For 'preprocessed_tk_al_cl_ed'__
+__For 'preprocessed_tk_al_cl_ed'__<br>
 Make copies from 'preprocessed_tk_al_cl' to new dir and manually clean them up & manually fix remaining alignment issues.
 
- ______________________
-|__Naming Conventions__|
-tk = sentence tokenized
-al = aligned using hunalign
-cl = cleaned (from hunalign remains)
+
+__Naming Conventions__<br>
+tk = sentence tokenized<br>
+al = aligned using hunalign<br>
+cl = cleaned (from hunalign remains)<br>
 ed = edited (manual cleanup and alignment work)
