@@ -53,11 +53,11 @@ ER
 - Navigate to: 'true\msg\LANGUAGE\menu.msgbnd'
 - Manually remove initial encoding ANSI chars up until dialogue begins.
 
- 
+___
 __For 'preprocessed_tk_al_cl_ed'__<br>
 Make copies from 'preprocessed_tk_al_cl' to new dir and manually clean them up & manually fix remaining alignment issues.
 
-
+___
 __Naming Conventions__<br>
 tk = sentence tokenized<br>
 al = aligned using hunalign<br>
